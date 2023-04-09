@@ -16,13 +16,15 @@ const Home = () => {
 
   const getTodos = async () => {
     try {
-      const { data } = await axios.get(url);
+      const { data } = await axios.get<TodoType[]>(url);
       setTodos(data);
     } catch (error) {
       console.log(error);
     }
   };
-
+  useEffect(() => {
+    getTodos();
+  }, []);
   return (
     <div className="main">
       <InputForm />
