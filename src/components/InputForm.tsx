@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from "react";
 
+const InputForm: React.FC<IInputForm> = ({ addTodo }) => {
+  const [task, setTask] = useState("");
 
-
-const InputForm = () => {
-  
   return (
     <div className="input-form">
       <input
@@ -11,16 +10,21 @@ const InputForm = () => {
         placeholder="Enter the todo..."
         type="text"
         maxLength={40}
-        
+        onChange={(e) => setTask(e.target.value)}
       />
       <button
         className="btn-hover btn-color"
         type="submit"
+        onClick={() => {
+          addTodo(task);
+          setTask("");
+        }}
+        disabled={!task}
       >
         Add New Todo
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default InputForm
+export default InputForm;
