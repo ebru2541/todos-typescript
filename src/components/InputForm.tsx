@@ -6,6 +6,7 @@ const InputForm: React.FC<IInputForm> = ({ addTodo }) => {
   return (
     <div className="input-form">
       <input
+      value={task}
         className="input-task"
         placeholder="Enter the todo..."
         type="text"
