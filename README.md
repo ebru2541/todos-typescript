@@ -1,7 +1,7 @@
 # Todos-typescript
 ## Expected Outcome
 
-![todos](task-tracker.gif)
+![todos](https://github.com/ebru2541/todos-typescript/blob/master/src/todo-typescript.gif)
 ```
 ## Skills
 
